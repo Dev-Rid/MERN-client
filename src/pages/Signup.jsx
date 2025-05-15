@@ -1,7 +1,11 @@
-import { useState } from 'react'
+import React, { useState } from 'react';
+
+
+const Signup = () => {
 
     const [email, setEmail ] = useState("")
     const [password, setPassword ] = useState("")
+
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -9,16 +13,18 @@ import { useState } from 'react'
         console.log(email, password)
     }
 
-const Signup = () => {
+
+
+
   return (
     <form className="signup" onSubmit={handleSubmit}>
         <h3>Sign up</h3>
 
-        <label htmlFor="">Email:</label>
+        <label>Email:</label>
         <input 
             type="email"
             onChange={(e) => setEmail(e.target.value)}
-            value={EMAIL}
+            value={email}
         />
 
         <label htmlFor="">Password:</label>
